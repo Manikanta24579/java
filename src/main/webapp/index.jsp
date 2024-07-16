@@ -110,7 +110,8 @@ input[type=submit]:hover {
           <option value="russia">Russia</option>    
           <option value="japan">Japan</option>    
           <option value="india">India</option>    
-          <option value="china">China</option>    
+          <option value="china">China</option> 
+          <option value="london">london</option>
         </select>    
       </div>    
     </div>    
