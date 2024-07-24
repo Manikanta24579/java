@@ -1,136 +1,83 @@
-<!DOCTYPE html>    
-<html>    
-<head>    
-<meta name="viewport" content="width=device-width, initial-scale=1">    
-<style>    
-* {    
-  box-sizing: border-box;    
-}    
-    
-input[type=text], select, textarea {    
-  width: 100%;    
-  padding: 12px;    
-  border: 1px solid rgb(70, 68, 68);    
-  border-radius: 4px;    
-  resize: vertical;    
-}    
-input[type=email], select, textarea {    
-  width: 100%;    
-  padding: 12px;    
-  border: 1px solid rgb(70, 68, 68);    
-  border-radius: 4px;    
-  resize: vertical;    
-}    
-    
-label {    
-  padding: 12px 12px 12px 0;    
-  display: inline-block;    
-}    
-    
-input[type=submit] {    
-  background-color: rgb(37, 116, 161);    
-  color: white;    
-  padding: 12px 20px;    
-  border: none;    
-  border-radius: 4px;    
-  cursor: pointer;    
-  float: right;    
-}    
-    
-input[type=submit]:hover {    
-  background-color: #45a049;    
-}    
-    
-.container {    
-  border-radius: 5px;    
-  background-color: #f2f2f2;    
-  padding: 20px;    
-}    
-    
-.col-25 {    
-  float: left;    
-  width: 25%;    
-  margin-top: 6px;    
-}    
-    
-.col-75 {    
-  float: left;    
-  width: 75%;    
-  margin-top: 6px;    
-}    
-    
-/* Clear floats after the columns */    
-.row:after {    
-  content: "";    
-  display: table;    
-  clear: both;    
-}    
-    
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */    
-</style>    
-</head>    
-<body>    
-<h2>FEED BACK FORM</h2>    
-<div class="container">    
-  <form>    
-    <div class="row">    
-      <div class="col-25">    
-        <label for="fname">First Name</label>    
-      </div>    
-      <div class="col-75">    
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">    
-      </div>    
-    </div>    
-    <div class="row">    
-      <div class="col-25">    
-        <label for="lname">Last Name</label>    
-      </div>    
-      <div class="col-75">    
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">    
-      </div>    
-    </div>    
-    <div class="row">    
-        <div class="col-25">    
-          <label for="email">Mail Id</label>    
-        </div>    
-        <div class="col-75">    
-          <input type="email" id="email" name="mailid" placeholder="Your mail id..">    
-        </div>    
-      </div>    
-    <div class="row">    
-      <div class="col-25">    
-        <label for="country">Country</label>    
-      </div>    
-      <div class="col-75">    
-        <select id="country" name="country">    
-            <option value="none">Select Country</option>    
-          <option value="australia">Australia</option>    
-          <option value="canada">Canada</option>    
-          <option value="usa">USA</option>    
-          <option value="russia">Russia</option>    
-          <option value="japan">Japan</option>    
-          <option value="india">India</option>    
-          <option value="china">China</option> 
-          <option value="london">london</option>
-          <option value="spain">spain</option>
-          <option value="malasia">malasia</option>
-          <option value="israel">israel</option>
-        </select>    
-      </div>    
-    </div>    
-    <div class="row">    
-      <div class="col-25">    
-        <label for="feed_back">Feed Back</label>    
-      </div>    
-      <div class="col-75">    
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>    
-      </div>    
-    </div>    
-    <div class="row">    
-      <input type="submit" value="Submit">    
-    </div>    
-  </form>    
-</div>    
-    
-</body>    
-</html>    
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <input type="submit" value="Continue to checkout" class="btn">
+      </form>
+    </div>
+  </div>
+
+  <div class="col-25">
+    <div class="container">
+      <h4>Cart
+        <span class="price" style="color:black">
+          <i class="fa fa-shopping-cart"></i>
+          <b>4</b>
+        </span>
+      </h4>
+      <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+      <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+      <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+      <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+    </div>
+  </div>
+</div>
